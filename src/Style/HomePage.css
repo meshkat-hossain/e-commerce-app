@@ -9,12 +9,11 @@
   .Home_container {
     border: 1px solid #3b5d50;
     align-items: center;
-    margin-bottom: 00px;
+    margin-bottom: 120px;
     background: #3b5d50;
   }
   
   .Navbar-section {
-    background: #3b5d50;
     width: 80%;
     margin: 0 auto;
     height: 60px;
@@ -24,7 +23,6 @@
     margin-top: 30px;
     margin-bottom: 100px;
   }
-
   .Nav-logo {
     color: #ffffff;
   }
@@ -51,13 +49,6 @@
     height: 40px;
     margin: 0px 50px 0px 50px;
     padding: 0px;
-  }
-  .Nav-item .active{
-    border-bottom: 3px solid yellow; 
-    
-  }
-  .Shop{
-    
   }
   .Nav-signUp {
     width: 90px;
@@ -536,6 +527,7 @@
   }
   /* ----------*----------- */
   /* form control section start */
+ 
   .form-p {
     color: #6b6d6c;
     font-size: 19px;
@@ -573,13 +565,12 @@
   .mail-section {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    height: 350px;
+
+    margin-top: 330px;
   }
   .mail-container {
     width: 50%;
-    position: relative;
-    margin-top: 70px;
+    
   }
   .footer-image {
     width: 50%;
@@ -743,4 +734,4 @@
   }
   /* form control section ends */
   /* ----------*----------- */
-  
+ 
