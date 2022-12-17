@@ -1,4 +1,6 @@
 import React from 'react'
+import BlogSections from '../Style/BlogSections.css'
+
 
 const BlogSection = () => {
   return (<>
@@ -18,7 +20,7 @@ const BlogSection = () => {
         alt="image2"
         src="https://untree.co/demos/furni/images/post-2.jpg"
       ></img>
-      <p>How To Keep Your Furniture Clean</p>
+      <p className="bold">How To Keep Your Furniture Clean</p>
       <p>by Robert Fox on Dec 15, 2021</p>
     </div>
     <div className="product-3">
@@ -26,7 +28,7 @@ const BlogSection = () => {
         alt="image3"
         src="https://untree.co/demos/furni/images/post-3.jpg"
       ></img>
-      <p>First Time Home Owner Ideas</p>
+      <p className="bold">First Time Home Owner Ideas</p>
       <p>by Kristin Watson on Dec 19, 2021</p>
     </div>
   </div>

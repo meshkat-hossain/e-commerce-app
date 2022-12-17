@@ -1,117 +1,86 @@
-import React from "react";
+import React, { useState, useEffect,useContext } from "react";
+import shop from "../Style/shop.css";
+
 import FooterDetails from "../Component/FooterDetails";
 import FooterSubscribe from "../Component/FooterSubscribe";
 import Home_About from "../Component/HomeAbout";
 import Nav from "../Component/Nav";
 
-const Shop = () => {
+import Button from "react-bootstrap/Button";
+import PageName from "./PageName";
+import Product from "../Component/Product";
+
+// import product context
+import { ProductContext } from '../contexts/ProductContext';
+
+
+const Shop = ({ Data}) => {
+
+  // get products from product context
+  const { products } = useContext(ProductContext);
+
+
+
+  const data = {
+    name: "SHOP",
+  };
+
   return (
     <>
       {/* Nav Bar start */}
       <div className="Home_container">
-        
-        <Home_About />
+        <PageName className="pages" {...data} />
       </div>
 
       {/* product section  */}
-      <div className="container mb-3 ">
-        {/* <!-- product section start --> */}
-        <div className="product-section ">
-          <div className="container ">
-            <div className="row">
-              <div className="col-12 col-md-4 col-lg-3 mb-5">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="../images/product-1.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price prices"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="../images//product-3.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="./images//product-1.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="./images//product-2.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="./images//product-3.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="./images//product-2.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="./images//product-1.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3 mb-5 text-center">
-                <a className="product-item" href="#">
-                  <img className="img-fluid" src="./images//product-3.png" />
-                  <h3 className="product-title">Nordic Chair</h3>
-                  <strong className="product-price"> $50.00</strong>
-                  {/* <!-- <span className="icon-cross"> 
-                      <img  src="./images/cross.svg" className="img-fluid"/>
-                    </span> --> */}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* <!-- product section start --> */}
+      <div className="card__body">
+        {products.map((product) => {
+          
+          return (
+            <>
+             <Product product={product} key={product.id}/>
+            </>
+          );
+        })}
+      </div>
+      {/* 
+      <div className="container ">
+        
+          {Data.map((values, index) => {
+            return (
+              <>
+                <div className="Card">
+                  <img
+                    src={values.image}
+                    alt=""
+                    className="Card_image"
+                  />
+                  <h5 className="product-title">{values.title}</h5>
+                  <strong className="product-price">
+                    Price :{values.price}
+                  </strong>
+                  <div>
+                    <button
+                      className="AddToCart"
+                      onClick={() => addCart(values)}
+                    >
+                      Add To Cart
+                    </button>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+       
+      </div> */}
 
-         {/* <!-- product section ends --> */}
-</div>
+      {/* <!-- product section ends --> */}
 
       <FooterSubscribe />
       <FooterDetails />
-      {/* Nav Bar ends */}
     </>
   );
 };
 
 export default Shop;
-// 25 .10:45

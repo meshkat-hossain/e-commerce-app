@@ -1,0 +1,212 @@
+.cart-heading {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  margin-top: 70px;
+  border-bottom: 3px solid #3b5d50;
+}
+
+
+.containers {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-Cart {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.firstSection {
+  display: flex;
+  width: 60%;
+  margin-bottom: 20px;
+}
+.productImage {
+  width: 50px;
+}
+.productTitle-1 {
+  padding: 15px;
+}
+.secondSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 12%;
+}
+.productPrice {
+  font-weight: bold;
+  width: 100%;
+  margin-right: 20px;
+}
+.productQuantity {
+  display: flex;
+  margin-top: 9px;
+}
+.qty {
+  padding: 0px 10px 0px 10px;
+}
+.negative button,
+.positive button {
+  background: #3b5d50;
+  border-radius: 10px;
+  padding: 0px 15px 0px 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.thiredSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20%;
+}
+.totalbtn {
+  margin-left: 20px;
+  width: 100%;
+}
+.removebtn {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+.removebtn button {
+  padding: 5px 20px 5px 20px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 5px;
+}
+
+
+.buttongroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ margin: 0 auto;
+}
+.btn-1{
+  background: #3b5d50;
+  color: #b6bdba;
+  width: 200px;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+ 
+}
+.continueShopping {
+  background: #3b5d50;
+  color: #b6bdba;
+  padding: 12px;
+  height: 60px;
+  font-weight: 600;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+ 
+}
+.couponbtn{
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #2f2f2f;
+  border-color: #2f2f2f;
+  margin-top: 20px;
+}
+.cartTotal button {
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  background: #2f2f2f;
+  border-color: #2f2f2f;
+  margin-top: 20px;
+}
+
+.cartTotal h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-decoration: underline;
+}
+.Ttl {
+  margin-top: 20px;
+}
+
+.cartcheckout{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.coupon{
+  margin-top: 60px;
+}
+
+
+
+@media (max-width: 1220px) {
+  .firstSection {
+    width: 50%;
+    
+  }
+
+}
+
+@media (max-width: 970px) {
+  .product-Cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .firstSection {
+    display: flex;
+    width: 100%;
+  }
+  .secondSection {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+  }
+  .thiredSection {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .totalbtn {
+    margin-left: 00px;
+    width: 100%;
+  }
+
+  .removebtn {
+    width: 100%;
+    text-align: end;
+    margin-right: 20px;
+  }
+ 
+  .continueShopping {
+    padding: 8px;
+    margin-left: 10px;
+  }
+  .productTitle {
+    padding: 00px;
+    margin-left: 10px;
+  }
+}
+.cartcheckout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.coupon-p{
+  text-align: start;
+}

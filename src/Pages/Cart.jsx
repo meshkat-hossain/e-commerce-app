@@ -1,93 +1,136 @@
-import React from 'react'
-import HomeAbout from '../Component/HomeAbout'
-import FooterSubscribe from '../Component/FooterSubscribe'
-import FooterDetails from '../Component/FooterDetails'
+import React, { useContext, useState, useEffect } from "react";
+// import HomeAbout from "../Component/HomeAbout";
+import FooterSubscribe from "../Component/FooterSubscribe";
+import FooterDetails from "../Component/FooterDetails";
+// import Nav from "../Component/Nav";
+import PageName from "./PageName";
+import cart from "../Style/Cart.css";
+import { Link } from "react-router-dom";
+
+//import cart context
+import { CartContext } from "../contexts/CartContext";
+
 const Cart = () => {
-  return (<>
-  
-  <div className="Home_container">
-        <HomeAbout />
+  const {
+    cart,
+    removeFromCart,
+    clearCart,
+    increaseCartItem,
+    decreaseNumber,
+    total,
+  } = useContext(CartContext);
+
+  const title = {
+    name: "Cart",
+  };
+
+  return (
+    <>
+      <div className="Home_container">
+        <PageName {...title} />
       </div>
- 
+      <div className="cart-heading">
+        <h2>Shopping cart</h2>
+        <h6>You Have Items In Shopping Cart</h6>
+      </div>
 
-{/* cart section start */}
-<div className="container">
-
-<div className="row mb-5">
-                <form className="col-md-12" method="post">
-                  <div className="site-blocks-table">
-                    <table className="table">
-                      <thead>
-                        <tr>
-                          <th className="product-thumbnail">Image</th>
-                          <th className="product-name">Product</th>
-                          <th className="product-price">Price</th>
-                          <th className="product-quantity">Quantity</th>
-                          <th className="product-total">Total</th>
-                          <th className="product-remove">Remove</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="product-thumbnail">
-                            <img src="images/product-1.png" alt="Image" className="img-fluid" />
-                          </td>
-                          <td className="product-name">
-                            <h2 className="h5 text-black">Product 1</h2>
-                          </td>
-                          <td>$49.00</td>
-                          <td>
-                            {/* <div className="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div className="input-group-prepend">
-                                <button className="btn btn-outline-black decrease" type="button">−</button>
-                              </div>
-                              <input type="text" className="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <div className="input-group-append">
-                                <button className="btn btn-outline-black increase" type="button">+</button>
-                              </div>
-                            </div> */}
-        
-                          </td>
-                          <td>$49.00</td>
-                          <td><a href="#" className="btn btn-black btn-sm">X</a></td>
-                        </tr>
-        
-                        <tr>
-                          <td className="product-thumbnail">
-                            <img src="images/product-2.png" alt="Image" className="img-fluid" />
-                          </td>
-                          <td className="product-name">
-                            <h2 className="h5 text-black">Product 2</h2>
-                          </td>
-                          <td>$49.00</td>
-                          <td>
-                            {/* <div className="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div className="input-group-prepend">
-                                <button className="btn btn-outline-black decrease" type="button">−</button>
-                              </div>
-                              <input type="text" className="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <div className="input-group-append">
-                                <button className="btn btn-outline-black increase" type="button">+</button>
-                              </div>
-                            </div>
-         */}
-                          </td>
-                          <td>$49.00</td>
-                          <td><a href="#" className="btn btn-black btn-sm">X</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
+      {/* cart section start */}
+      <div className="containers">
+        {cart.map((cartItem) => {
+          const { id, image, title, price, amount } = cartItem;
+          return (
+            <React.Fragment key={id}>
+              <div className="product-Cart">
+                <div className="firstSection">
+                  <div className="productImage">
+                    <Link to={`/product/${id}`}>
+                      <img alt="" src={image} />
+                    </Link>
                   </div>
-                </form>
+                  <div className="productTitle-1">
+                    <Link to={`/product/${id}`}>
+                      <span>{title}</span>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="secondSection">
+                  <div className="productPrice">
+                    <span>${price}</span>
+                  </div>
+                  <div className="productQuantity">
+                    <div className="negative">
+                      <button onClick={() => decreaseNumber(id)}>-</button>
+                    </div>
+                    <div className="qty">
+                      <span>{amount}</span>
+                    </div>
+                    <div className="positive">
+                      <button onClick={() => increaseCartItem(id)}>+</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="thiredSection">
+                  <div className="totalbtn">
+                    <span>
+                      <h5>Total:  {`$ ${parseFloat(price * amount).toFixed(2)}`}</h5>
+                    </span>
+                  </div>
+                  <div className="removebtn" onClick={() => removeFromCart(id)}>
+                    <button>X</button>
+                  </div>
+                </div>
               </div>
+            </React.Fragment>
+          );
+        })}
+        <div className="buttongroup">
+          <button className="btn-1" onClick={() => clearCart()}>
+            Clear Cart
+          </button>
+          <Link to={`/shop`}>
+            <button className="continueShopping"> Continue Shopping</button>
+          </Link>
+        </div>
+        <div className="cartcheckout">
+          <div className="coupon">
+            <div className="row">
+              <div className="col-md-12">
+                <label className="text-black h4" for="coupon">
+                  Coupon
+                </label>
+                <p className="coupon-p">Enter your coupon code if you have one.</p>
+              </div>
+              <div className="col-md-8 mb-3 mb-md-0">
+                <input
+                  type="text"
+                  className="form-control py-3"
+                  id="coupon"
+                  placeholder="Coupon Code"
+                />
+              </div>
+              <div className="col-md-4">
+                <button className="couponbtn">Apply Coupon</button>
+              </div>
+            </div>
+          </div>
 
-</div>
+          <div className="cartTotal">
+            <h1>Cart Totals</h1>
+            <h4>Subtotal :</h4>
+            <h6>$ {parseFloat(total).toFixed(2)}</h6>
 
+            <h4 className="Ttl">Total :</h4>
+            <h6>$ {parseFloat(total).toFixed(2)}</h6>
+            <button>Proceed To CheckOut</button>
+          </div>
+        </div>
+      </div>
 
       <FooterSubscribe />
       <FooterDetails />
-  </>
-  )
-}
+    </>
+  );
+};
 
-export default Cart
+export default Cart;

@@ -1,0 +1,182 @@
+.why-choose-section {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+.chooseable-heading{
+  margin-bottom: 70px;
+}
+
+.chooseable-description,
+.chooseable-image {
+  width: 49%;
+  height: 500px;
+}
+.chooseable-heading {
+  height: 100px;
+}
+.choosable-p {
+  min-width: 400px;
+  color: #505251;
+}
+.description-flex {
+  display: flex;
+
+}
+.forHomePage{
+  width: 100%;
+
+}
+.first-two-description {
+  width: 50%;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.description-1,
+.description-2 {
+  width: 100%;
+  margin-top: 10px;
+  height: 200px;
+  color: #505251;
+  font-size: 0.9rem;
+}
+
+.last-two-description {
+  width: 50%;
+  height: 390px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.description-3,
+.description-4 {
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  color: #505251;
+  font-size: 0.9rem;
+}
+
+/* image section start */
+.chooseable-image {
+  position: relative;
+}
+.image1 {
+  width: 80%;
+  height: 350px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  z-index: 1;
+}
+.description-image {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 20px;
+}
+.image2 {
+  position: absolute;
+  top: -75px;
+  left: 25px;
+  height: 300px;
+  width: 300px;
+}
+
+@media (max-width: 1000px) {
+  .why-choose-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+  }
+
+  .chooseable-description,
+  .chooseable-image {
+    width: 100%;
+    height: 100%;
+  }
+  .chooseable-image {
+    width: auto;
+    height: 600px;
+  }
+  .chooseable-heading {
+    height: 100%;
+  }
+  .choosable-p {
+    min-width: 100%;
+    text-align: start;
+  }
+  .description-1,
+  .description-2 {
+    padding-right: 10px;
+  }
+  .description-1,
+  .description-2,
+  .description-3,
+  .description-4 {
+    width: 100%;
+    margin-top: 10px;
+    height: 100%;
+    text-align: left;
+   
+  }
+
+  .description-1 p,
+  .description-2 p,
+  .description-3 p,
+  .description-4 p {
+    text-align: left;
+    font-size: 13px;
+  }
+  .description-1 h5,
+  .description-2 h5,
+  .description-3 h5,
+  .description-4 h5 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .description-flex {
+    display: block;
+  }
+.first-two-description,
+.last-two-description{
+  width: 100%;
+  margin-bottom:50px;
+  margin-top: -20px;
+}
+.last-two-description{
+  margin-bottom: 50px;
+}
+  .image1 {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    z-index: 1;
+  }
+  .description-image {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 20px;
+  }
+  .image2 {
+    position: absolute;
+    top: 120px;
+    left: -9px;
+    height: 300px;
+    width: 300px;
+  }
+
+
+}

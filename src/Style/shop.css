@@ -1,0 +1,153 @@
+
+
+.cards {
+  /* border: 1px solid var(--softer-color); */
+ 
+  box-shadow: 1px 1px 5px  rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardImage {
+  width: 30%;
+}
+.cards h4{
+  margin: 0.5rem auto;
+}
+
+.cards:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+}
+
+.card-price-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.add-item-btn {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1rem;
+  background-color: #fff;
+  color:#3b5d50;
+  border: 2px solid rgb(105, 105, 101);
+  border-radius: 0.5rem;
+  cursor: pointer;}
+  .add-item-btn:hover {
+    background-color: #3b5d50;
+    color: #fff;
+  }
+
+
+
+  .card__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: -50px;
+  }
+
+
+  .count {
+    width: 20px;
+    height: 20px;
+    background: rgb(231, 68, 68);
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: -13px;
+    right: 2px;
+    font-size: 14px;
+  }
+  .count:hover{
+    width: 23px;
+    height: 23px;
+  }
+  
+  @media screen and (max-width: 1040px) {
+    .card__body {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .card__body {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media print {
+    .card__body {
+      display: none;
+    }
+  }
+  
+  
+
+
+  /* AddToCart */
+
+.AddToCart {
+  background: #3b5d50;
+  border-radius: 5px;
+  color: #ced4da;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+
+/* pagename */
+.pagename {
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+
+
+table {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 20px;
+  height: 100%;
+  table-layout: fixed;
+}
+
+table td {
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+.product-title {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+@media (max-width: 620px) {
+  .pagename {
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 150px;
+  }
+
+  .add-item-btn{
+    padding: 5px 5px 5px 5px;
+  }
+
+
+
+  
+}

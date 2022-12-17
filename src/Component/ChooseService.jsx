@@ -1,20 +1,13 @@
-import React from 'react'
-import ChooseSections from '../Style/ChooseSections.css'
-import ChooseService from '../Component/ChooseService'
-const ChooseSection = () => {
-  return (
-    <div className="why-choose-section">
-    {/* start description section */}
-    <div className="chooseable-description">
-      <div className="chooseable-heading">
-        <h1>Why Choose Us</h1>
-        <p className="choosable-p">
-          Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
-          velit. Aliquam vulputate velit imperdiet dolor tempor.
-        </p>
-      </div>
+import React from "react";
+import Chooseservice from "../Style/Choose-Service.css";
 
-      <div className="description-flex forHomePage ">
+const ChooseService = () => {
+  return (
+    <>
+
+
+
+      <div className="description-flex ">
         <div className="first-two-description">
           <div className="description-1">
             <img
@@ -66,29 +59,8 @@ const ChooseSection = () => {
         </div>
       </div>
 
-    </div>
-    {/* end description section */}
+    </>
+  );
+};
 
-    {/* start image section  */}
-    <div className="chooseable-image">
-      <div className="image1">
-        <img
-          className="description-image"
-          alt="img"
-          src="https://untree.co/demos/furni/images/why-choose-us-img.jpg"
-        ></img>
-      </div>
-      <div className="image2">
-        <img
-          alt="background_image"
-          src="https://untree.co/demos/furni/images/dots-yellow.svg"
-        ></img>
-      </div>
-    </div>
-
-    {/* ends image section */}
-  </div>
-  )
-}
-
-export default ChooseSection
+export default ChooseService;

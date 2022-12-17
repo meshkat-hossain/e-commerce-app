@@ -1,4 +1,6 @@
 import React from 'react'
+import FooterSubscribes from '../Style/FooterSubscribes.css'
+
 
 const FooterSubscribe = () => {
   return (
@@ -15,7 +17,7 @@ const FooterSubscribe = () => {
           <input placeholder="Enter Your mail"></input>
         </div>
         <div className="form-button">
-          <button>Send</button>
+          <button>SEND</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,14 @@
+.container{
+    margin-top: -80px;
+}
+
+.row{
+    margin-bottom: 50px;
+}
+
+.row h3 a{
+    color: rgb(49, 49, 49);
+}
+.row p a{
+    color: rgb(49, 49, 49);
+}

@@ -1,0 +1,174 @@
+.footer-details {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 00px;
+  margin-bottom: 70px;
+}
+
+.footer-div1 {
+  width: 45%;
+}
+.footer-div1 h2 {
+  margin-top: -45px;
+  margin-bottom: 20px;
+  color: #3b5d50;
+  font-size: 2.5rem;
+}
+.footer-div1 p {
+  color: #6b6d6c;
+}
+
+.footer-div1 a {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  cursor: pointer;
+
+  display: inline-block;
+}
+.footer-div1 a i {
+  width: 45px;
+  height: 45px;
+  background: #b0cabd;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.fa-brands {
+  padding-top: 15px;
+}
+.fa-brands:hover {
+  background: #3b5d50;
+  color: white;
+}
+/* .footer-div1 a:hover{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#3b5d50;
+  } */
+.footer-div2 {
+  width: 63%;
+  margin-left: 100px;
+}
+
+.parent {
+  display: flex;
+
+}
+.parent1 {
+  width: 50%;
+    margin-right: 20%;
+}
+.parent2 {
+  width: 50%;
+}
+.div1 a,
+.div2 a,
+.div3 a ,
+.div4 a,
+.div5 a,
+.div6 a,
+.div7 a ,
+.div8 a,
+.div9 a,
+.div10 a,
+.div11 a,
+.div12 a,
+.div13 a,
+.div14 a {
+  line-height: 40px;
+  text-decoration: none;
+  color: #6b6d6c;
+}
+
+
+/* css grid ends */
+
+.hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.copyRightSection {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.copyright p {
+  color: #5c5f5e;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.terms a {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .footer-details {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  .footer-div1 {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .footer-div1 p {
+    text-align: start;
+  }
+
+  .footer-div2 {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+.div1 a,
+.div2 a,
+.div3 a ,
+.div4 a,
+.div5 a,
+.div6 a,
+.div7 a ,
+.div8 a,
+.div9 a,
+.div10 a,
+.div11 a,
+.div12 a,
+.div13 a,
+.div14 a {
+  line-height: 40px;
+  text-decoration: none;
+  color: #6b6d6c;
+}
+
+
+.copyRightSection {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .terms a {
+    margin-left: 10px;
+    text-align: center;
+  }
+}

@@ -1,27 +1,26 @@
 import React from "react";
-import HomeAbout from '../Component/HomeAbout'
-import ProductSection from '../Component/ProductSection'
-import ChooseSection from '../Component/ChooseSection'
-import HelpSection from '../Component/HelpSection'
-import PopularProductSection from '../Component/PopularProductSection'
-import Testimonial from '../Component/Testimonial'
-import BlogSection from '../Component/BlogSection'
-import FooterSubscribe from '../Component/FooterSubscribe'
-import FooterDetails from '../Component/FooterDetails'
-import svg from "../Image/wave.svg"
-
+import HomeAbout from "../Component/HomeAbout";
+import ProductSection from "../Component/ProductSection";
+import ChooseSection from "../Component/ChooseSection";
+import HelpSection from "../Component/HelpSection";
+import PopularProductSection from "../Component/PopularProductSection";
+import Testimonial from "../Component/Testimonial";
+import BlogSection from "../Component/BlogSection";
+import FooterSubscribe from "../Component/FooterSubscribe";
+import FooterDetails from "../Component/FooterDetails";
 
 const Homepages = () => {
+  const title = {
+    name: "Modern Interior Design Studio",
+  };
+
   return (
     <>
       {/* ----------------*------------ */}
       {/* start Home section */}
       <div className="Home_container">
-        {/* navbar start */}
-        {/* navbar ends */}
-
         {/* start Home about */}
-        <HomeAbout />
+        <HomeAbout myData={title} />
         {/* end Home Image */}
       </div>
 
@@ -62,19 +61,19 @@ const Homepages = () => {
       {/* ----------------*------------ */}
       {/* blog section start */}
       <div className="recent-blog">
-    <div>
-      <h2>Recent Blog</h2>
-    </div>
-    <div>
-      <h5>View All Product</h5>
-    </div>
-  </div>
+        <div>
+          <h2>Recent Blog</h2>
+        </div>
+        <div>
+          <h5>View All Product</h5>
+        </div>
+      </div>
       <BlogSection />
       {/* blog section ends */}
       {/* ----------------*------------ */}
-      <div className="svg-wave">
+      {/* <div className="svg-wave">
         <img alt="" src={svg}></img>
-      </div>
+      </div> */}
       {/* ----------------*------------ */}
       {/* footer section start */}
 

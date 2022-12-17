@@ -1,21 +1,30 @@
 import React from 'react'
+import HomeAbout from '../Style/HomeAbout.css'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const Home_About = () => {
+const Home_About = ({name}) => {
+
+
 const navigate = useNavigate
 
   return (
     <div className="Home-about-section">
     {/* home description start */}
     <div className="Home-description">
+      <h1 className='Home-heading'>Modern Interior Design Studio</h1>
       <p className="home-pera2">
+       
         Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
-        <br></br> velit. Aliquam vulputate velit imperdiet dolor tempor
+         velit. Aliquam vulputate velit imperdiet dolor tempor
         tristique.
       </p>
       <div className="Home-Description-button">
-        <button className="btn1">Shop Now</button>
-        <button className="btn2" onClick={() => {
+      <Link to={`/shop`}>
+
+        <button className="btn1 color-5">Shop Now</button>
+      </Link>
+        <button className="btn2 color-5 " onClick={() => {
           navigate("/")
         }}> Explore</button>
       </div>

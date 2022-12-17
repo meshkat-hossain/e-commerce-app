@@ -6,18 +6,28 @@ import PopularProductSection from '../Component/PopularProductSection'
 import Testimonial from '../Component/Testimonial'
 import FooterSubscribe from '../Component/FooterSubscribe'
 import FooterDetails from '../Component/FooterDetails'
+import PageName from './PageName'
+import ChooseService from '../Component/ChooseService'
 
 
 
 
 const Services = () => {
+  const title = {
+    name: "Services"
+  }
   return (
     <>
      <div className="Home_container">
-        <HomeAbout />
+      
+       <PageName {...title}/>
       </div>
-      <ChooseSection />
-      <PopularProductSection />
+      <div className="main-container">
+
+      <ChooseService />
+      <ChooseService />
+      </div>
+      <PopularProductSection  />
       <Testimonial />
       <FooterSubscribe />
       <FooterDetails />

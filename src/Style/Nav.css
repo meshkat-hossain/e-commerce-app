@@ -1,0 +1,174 @@
+.Nav-item {
+  position: relative;
+  height: 40px;
+  margin: 0px 50px 0px 50px;
+  padding: 0px;
+}
+.Active {
+  color: #ffffff;
+}
+
+.mobileVersion {
+  display: flex;
+}
+.user,
+.cart {
+  position: relative;
+  padding: 5px;
+  display: inline-block;
+}
+
+.hamburger-menu {
+  display: none;
+}
+body .Nav-logo h1 {
+  color: #ffffff;
+}
+@media (min-width: 976px) {
+  .Navbar-section {
+    background: #3b5d50;
+    width: 80%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .Nav-logo {
+    color: #ffffff;
+  }
+  .ul {
+    display: flex;
+  }
+
+  ul li {
+    padding-left: 18px;
+    list-style: none;
+  }
+  ul li a {
+    text-decoration: none;
+    color: #889791;
+    font-weight: bold;
+  }
+  ul li a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid yellow;
+  }
+  .hamburger-menu a svg {
+    color: aliceblue;
+  }
+  .Active {
+    color: #e3e7db;
+  }
+
+  .mobileVersion {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 976px) {
+  .Navbar-section {
+    margin-bottom: -100px;
+    padding: 40px 100px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: -20px;
+  }
+  .hamburger-menu a svg {
+    color: aliceblue;
+  }
+
+  .Nav-signUp .cart {
+    position: absolute;
+  }
+
+  .Nav-logo h1 {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .ul {
+    padding-left: 0px;
+  }
+
+  ul li {
+    padding: 4px;
+    list-style: none;
+  }
+  ul li a {
+    text-decoration: none;
+    color: #889791;
+    font-weight: bold;
+  }
+  ul li a:hover {
+    color: #ffffff;
+  }
+  .Active {
+    color: #e3e7db;
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-top: 40px;
+    margin-right: 100px;
+  }
+  .Nav-item,
+  .Nav-signUp {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .Navbar-section {
+    padding: 10px;
+    margin-bottom: -100px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+  }
+
+  .Nav-signUp .cart {
+    position: absolute;
+  }
+
+  .Nav-logo {
+    margin-top: 30px;
+  }
+  .Nav-logo h1 {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .ul {
+    padding-left: 0px;
+  }
+
+  ul li {
+    padding: 4px;
+    list-style: none;
+  }
+  ul li a {
+    text-decoration: none;
+    color: #889791;
+    font-weight: bold;
+  }
+  ul li a:hover {
+    color: #ffffff;
+  }
+  .Active {
+    color: #e3e7db;
+  }
+
+}

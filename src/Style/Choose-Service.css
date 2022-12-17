@@ -1,0 +1,27 @@
+.main-container{
+  width: 80%;
+  margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.description-flex {
+  width: 100%;
+
+}
+.first-two-description,
+.last-two-description {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+
+}
+
+.description-1,
+.description-2,
+.description-3,
+.description-4{
+    padding: 2px;
+    margin: 5px;
+    
+}
