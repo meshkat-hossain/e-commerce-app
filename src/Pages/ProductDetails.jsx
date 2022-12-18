@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Productdetails from "../Style/Productdetails.css";
 
+
 import FooterSubscribe from '../Component/FooterSubscribe'
 import FooterDetails from '../Component/FooterDetails'
 // import useParams
@@ -28,9 +29,20 @@ const ProductDetails = () => {
 
   //distructure product
   const { title, price, description, image } = product;
+  
+  
   return (
     <>
+
+<div  className="Home_container " >
+       
+       <h2 className="title"  >Product Details</h2>
+      </div>
+
       {
+
+
+
         <div className="productDetails">
           <div className="div-1">
             <div className="productImage-1">

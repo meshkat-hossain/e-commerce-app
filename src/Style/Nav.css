@@ -7,7 +7,15 @@
 .Active {
   color: #ffffff;
 }
-
+ul li a {
+  text-decoration: none;
+  color: #889791;
+  font-weight: bold;
+}
+ul li a:hover {
+  color: #ffffff;
+  border-bottom: 2px solid yellow;
+}
 .mobileVersion {
   display: flex;
 }
@@ -24,6 +32,7 @@
 body .Nav-logo h1 {
   color: #ffffff;
 }
+
 @media (min-width: 976px) {
   .Navbar-section {
     background: #3b5d50;
@@ -112,10 +121,9 @@ body .Nav-logo h1 {
   }
   ul li a:hover {
     color: #ffffff;
+    border-bottom: 2px solid yellow;
   }
-  .Active {
-    color: #e3e7db;
-  }
+ 
 
   .hamburger-menu {
     display: block;

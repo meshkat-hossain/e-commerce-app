@@ -1,53 +1,59 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import style from "../Style/Nav.css";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
 
-
 const Nav = () => {
+  
   const [hambargur, setHambargur] = useState(false);
-const {itemAmmount} =useContext(CartContext)
+  const { itemAmmount } = useContext(CartContext);
+
+  const navLinkStyle = ({isActive}) => {
+return{
+  color: isActive ? '#fff' : '' ,
+  fontWeight:isActive ? "bolder" : "bold",
+}
+  }
   return (
     <div className="Navbar-section">
       <div className="Nav-logo">
-      <Link to={`/`}>
-
-        <h1>
-          Furni <span className="logo-dot">.</span>
-        </h1>
-      </Link>
+        <Link  to={`/`}>
+          <h1>
+            Furni <span className="logo-dot">.</span>
+          </h1>
+        </Link>
       </div>
 
       <div className={hambargur ? " mobileVersion" : "Nav-item"}>
         <ul className="ul">
           <li>
-            <NavLink to="/" className="Home">
+            <NavLink  style={navLinkStyle} to="/" end className="Home">
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/shop" className="Shop">
+            <NavLink style={navLinkStyle} to="/shop" className="Shop">
               Shop
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" className="about-us">
+            <NavLink style={navLinkStyle} to="/about" className="about-us">
               About Us
             </NavLink>
           </li>
           <li>
-            <NavLink to="/services" className="Services">
+            <NavLink style={navLinkStyle} to="/services" className="Services">
               Services
             </NavLink>
           </li>
           <li>
-            <NavLink to="/blog" className="Blog">
+            <NavLink style={navLinkStyle} to="/blog" className="Blog">
               Blog
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className="Contact-Us">
+            <NavLink style={navLinkStyle} to="/contact" className="Contact-Us">
               Contact Us
             </NavLink>
           </li>
@@ -92,4 +98,5 @@ const {itemAmmount} =useContext(CartContext)
 };
 
 export default Nav;
+
 

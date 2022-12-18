@@ -44,38 +44,9 @@ const Shop = ({ Data}) => {
           );
         })}
       </div>
-      {/* 
-      <div className="container ">
-        
-          {Data.map((values, index) => {
-            return (
-              <>
-                <div className="Card">
-                  <img
-                    src={values.image}
-                    alt=""
-                    className="Card_image"
-                  />
-                  <h5 className="product-title">{values.title}</h5>
-                  <strong className="product-price">
-                    Price :{values.price}
-                  </strong>
-                  <div>
-                    <button
-                      className="AddToCart"
-                      onClick={() => addCart(values)}
-                    >
-                      Add To Cart
-                    </button>
-                  </div>
-                </div>
-              </>
-            );
-          })}
-       
-      </div> */}
+ 
 
-      {/* <!-- product section ends --> */}
+ 
 
       <FooterSubscribe />
       <FooterDetails />

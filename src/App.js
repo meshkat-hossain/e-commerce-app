@@ -17,58 +17,6 @@ import ProductDetails from './Pages/ProductDetails'
 const App = () => {
 
 
-  //fetch data
-  // useEffect(() => {
-  //   storeData();
-  // }, []);
-  // const storeData = async () => {
-  //   const response = await fetch("https://fakestoreapi.com/products");
-  //   const jsonData = await response.json();
-  //   setData(jsonData);
-  // };
-
-  //   // add to cart
-
-  //   const addToCart = (data,id) => {
-  //   const newItem= {...data, ammount: 1};
-  // //if check the item is already in cart
-  // const cartItem = cart.find((item) => {
-  //   return item.id===id;
-  // })
-
-  // if (cartItem) {
-  //   const newCart = [...cart].map((item) => {
-  //     if (item.id===id) {
-  //       return{
-  //         ...item , ammount: cartItem.ammount +1
-  //       }
-  //     }else {
-  //       return item
-  //     }
-  //   })
-  //   setCart(newCart)
-  // }
-  // else{
-  //   setCart([...cart, newItem])
-  // }
-
-  //   };
-
-  // //removeFromCart
-  // const removeFromCart = (id) => {
-  //   const newCart = cart.filter((item) => {
-  //     return item.id !== id;
-  //   });
-  //   setCart(newCart);
-  // }
-
-  //   //clear cart
-
-  //   const clearCart = () => {
-  //     setCart([]);
-  //   };
-
-  //   //total item value
 
   return (
     <>
