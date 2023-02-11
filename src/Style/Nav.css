@@ -1,8 +1,14 @@
+.fabarsIcon{
+  color: #ffffff;
+  font-size: 28px;
+}
+
 .Nav-item {
   position: relative;
   height: 40px;
   margin: 0px 50px 0px 50px;
   padding: 0px;
+  margin-top: 13px;
 }
 .Active {
   color: #ffffff;
@@ -66,9 +72,7 @@ body .Nav-logo h1 {
     color: #ffffff;
     border-bottom: 2px solid yellow;
   }
-  .hamburger-menu a svg {
-    color: aliceblue;
-  }
+
   .Active {
     color: #e3e7db;
   }
@@ -87,14 +91,12 @@ body .Nav-logo h1 {
     padding: 40px 100px;
   }
 
-  .hamburger-menu {
+  .hamburger-menu{
     display: block;
     position: absolute;
-    right: 0px;
-    top: -20px;
-  }
-  .hamburger-menu a svg {
-    color: aliceblue;
+    margin-left: 520px;
+    top: 40px;
+
   }
 
   .Nav-signUp .cart {
@@ -124,12 +126,6 @@ body .Nav-logo h1 {
     border-bottom: 2px solid yellow;
   }
  
-
-  .hamburger-menu {
-    display: block;
-    margin-top: 40px;
-    margin-right: 100px;
-  }
   .Nav-item,
   .Nav-signUp {
     display: none;
@@ -142,11 +138,14 @@ body .Nav-logo h1 {
     margin-bottom: -100px;
   }
 
-  .hamburger-menu {
+  .hamburger-menu{
     display: block;
     position: absolute;
-  }
+    margin-left: 270px;
+    top: 33px;
 
+  }
+ 
   .Nav-signUp .cart {
     position: absolute;
   }
@@ -178,5 +177,25 @@ body .Nav-logo h1 {
   .Active {
     color: #e3e7db;
   }
+}
+  @media (max-width: 425px){
+    .hamburger-menu{
+      display: block;
+      position: absolute;
+      margin-left: 350px;
+      top: 33px;
+  
+    }
+   
+  }
 
+@media (max-width: 375px){
+  .hamburger-menu{
+    display: block;
+    position: absolute;
+    margin-left: 300px;
+    top: 33px;
+
+  }
+ 
 }

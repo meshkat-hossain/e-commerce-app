@@ -10,6 +10,7 @@ const ChooseService = () => {
       <div className="description-flex ">
         <div className="first-two-description">
           <div className="description-1">
+            
             <img
               alt=""
               src="https://untree.co/demos/furni/images/truck.svg"
